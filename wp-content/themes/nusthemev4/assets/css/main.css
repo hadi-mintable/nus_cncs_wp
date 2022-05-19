@@ -1,0 +1,607 @@
+.fl-block-overlay-actions svg {margin: 6px 3px;}
+
+#main.site-main > hr {
+	border-top: 0px !important;
+}
+
+.ast-custom-post-type #content .fl-row-fixed-width {
+	max-width: 1180px;
+	padding: 0px 5px;
+	margin: 0px auto;
+}
+
+.custom-breadcrumbs {
+	border-bottom: 1px solid #dee5ea;
+	padding: 20px 0px;
+}
+
+.custom-breadcrumbs ul {
+	list-style: none;
+	max-width: 1180px;
+	display: flex;
+	margin: 0px auto;
+	padding: 0px 20px;
+}
+
+.custom-breadcrumbs > ul > li {
+	float: left;
+	margin-right: 5px;
+	color: #959595;
+}
+
+.custom-breadcrumbs > ul > li > a {
+	color: #959595;
+}
+
+.custom-breadcrumbs > ul > li:nth-child(n+2)::before {
+	 font-family: "Font Awesome 5 Pro";
+	 font-weight: 600;
+	 content: "\f105";
+	 font-size: 15px;
+	 margin: 0px 10px;
+}
+
+.orange-button .fl-button {
+	background-color: #ee7c00 !important;
+    border: 0px !important;
+    border-radius: 0px !important;
+	padding: 15px 25px !important
+}
+
+.orange-button .fl-button .fl-button-text {
+	color: white !important;
+	font-size: 15px;
+}
+
+.custom-row {
+	display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+   flex-wrap: wrap;
+}
+
+table.table-borderless td, table.table-borderless th, table.table-borderless {
+	border: none;
+}
+
+div.page-buttons {
+	display: flex;
+}
+
+div.page-buttons > ul {
+	display: inline-flex;
+	margin: 0px auto;
+}
+
+div.page-buttons ul.pagination li.current-pagination-item > a {
+	background-color: #003D7C;
+	color: white;
+}
+
+/* start of top menu */
+.nus-quicklinks{
+	padding-bottom: 20px;
+}
+
+.nus-quicklinks li:hover > a{
+	text-decoration: none;
+}
+
+.nus-quicklinks .menu-item{
+	margin: 5px;
+	padding: 5px !important;
+	background-color: #05407e;
+	line-height: 0;
+	border-radius: 50px;
+}
+
+.nus-quicklinks .menu-item a{
+	color: #ffffff !important;
+}
+
+.nus-quicklinks .menu-item svg{
+	width: 16px;
+	height: 16px;
+}
+/* end of top menu */
+
+/* start of main menu */
+.main-header-menu .current-menu-ancestor >  a{
+	box-shadow: 0 -3px 0 #ef7c00 inset;
+	color: #003d7c !important;
+}
+
+ul#primary-menu ul.sub-menu > li:hover > a{
+    background-color: #f5f5f5;
+    color: #000;
+	text-decoration: none;
+}
+
+.main-header-bar .main-header-bar-navigation .menu-item-has-children>a:after {
+	content: "\f0d7";
+	font-family: "Font Awesome 5 Pro";
+}
+
+.header-main-layout-1 .ast-main-header-bar-alignment {
+	margin-left: 0;
+}
+
+.header-main-layout-1 .main-navigation {
+	padding-left: 0;
+}
+/* end of main menu */
+
+/* start of site-content*/
+.nus-department-header .blue {
+	background-color: #003d7c;
+	color: #fff;
+}
+
+.nus-department-header h2 {
+	margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#primary {
+    margin: 20px 0;
+}
+
+.grey {
+    background-color: #f0f0f0;
+    margin: 20px;
+}
+
+.text-editor-h4-orange h4{
+	margin-bottom: 5px;
+    color: #ec7f00;
+}
+
+.btn-accordion .uabb-adv-accordion-button{
+	width: fit-content;
+}
+
+.btn-accordion .uabb-adv-accordion-button:hover{
+	opacity: 0.85;
+}
+
+.comments-area{
+	display: none;
+}
+/* end of site-content */
+
+/* start of footer breadcrumbs */
+.nus-breadcrumbs{
+	background: #002449;
+	padding: 13px 0;
+	border-top: 1px solid #003d7c;
+	border-bottom:none;
+	font-size: 14px;
+}
+
+.nus-breadcrumbs ul{
+	list-style: none;
+	max-width: 1180px;
+	display: flex;
+	margin: 0px auto;
+}
+
+.nus-breadcrumbs .item-home svg{
+	color: #ef7c00;
+	margin-right: 10px;
+}
+
+.nus-breadcrumbs ul > li {
+	float: left;
+	margin-right: 5px;
+}
+
+.nus-breadcrumbs ul > li > a {
+	text-decoration: none;
+	color: #959595;
+}
+
+.nus-breadcrumbs ul li + li:before{
+	content: " / " !important;
+	margin-right: 5px !important;
+	margin-left: 0 !important;
+}
+/* end of footer breadcrumbs */
+
+/* start of footer */
+.site-footer{
+	margin-top: 50px;
+}
+
+.footer-adv-layout-4 .footer-adv-widget-1{
+	text-align: center;
+}
+
+.footer-adv-widget-1 .footnav-info ul{
+	width: 240px; 
+	margin-left: auto; 
+	margin-right: auto; 
+	margin-bottom: 30px; 
+	color: #fff; 
+	text-align: left;
+}
+
+.footer-adv-widget-1 .footnav-info .fa-location-arrow{
+	position: absolute;
+    top: 3px;
+}
+
+.footer-adv-layout-4 .custom-html-widget h2 a{
+	color: #fff;
+}
+
+.footer-adv-layout-4 .custom-html-widget a{
+	color: #999;
+}
+
+.footer-adv-layout-4 .custom-html-widget a:hover{
+	color: #fff;
+	text-decoration: none;
+}
+
+.footer-adv .widget-title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.footer-adv .footer-adv-widget-4 {
+    border-left: 1px solid #003d7c;
+    padding-left: 25px;
+}
+
+.nus-contact-us li{
+	position: relative;
+    padding-left: 30px;
+}
+
+.nus-contact-us li svg{
+	display: block;
+    position: absolute;
+    left: 0;
+    /* color: #fff; */
+    top: 2px;
+}
+
+#social-column .popover {
+	max-width: 250px;
+}
+
+#social-column .popover.bs-popover-top {
+	top: -20px !important;
+	left: -2px !important;
+}
+
+#social-column .popover-body {
+	padding: 9px 14px;
+	font-size: 14px !important;
+}
+
+#social-column .popover-body img {
+	display: block;
+	margin: 0 auto;
+}
+/* end of footer */
+
+/* start of sidemenu */
+.nus-right-menu-bar{
+  background-color: #fbf5f3;
+}
+
+.nus-right-menu-bar li a{
+  color: #000000 !important;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nus-right-menu-bar .current-menu-item > a, .nus-right-menu-bar a:hover {
+    background-color: #fbf5f3 !important;
+    color: #ec7f00 !important;
+}
+
+.nus-right-menu-bar .current-menu-item > a::before {
+    font-family: "Font Awesome 5 Pro";
+    content: "\f105";
+    font-weight: 600;
+    margin-right: 10px;
+}
+/* end of sidemenu */
+
+/* start of homepage */
+.home-research-box{
+	padding: 0 10px 10px 10px;
+}
+
+.home-research-box .fl-col-content{
+	border: 1px solid #f7f7f7;
+    box-shadow: 0px 6px 20px -4px #ccc;
+}
+
+.home-research-box .fl-module-photo .fl-module-content{
+	margin-top: 10px;
+}
+
+.home-info-box .uabb-infobox h3.uabb-infobox-title {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #ffffff;
+    color: #0c4682 ;
+    font-weight: 600;
+}
+
+.home-research-box-2{
+	padding: 0 10px 10px 10px;
+}
+
+.home-research-box-2 .fl-col-content{
+	border: 1px solid #f7f7f7;
+    box-shadow: 0px 6px 20px -4px #ccc;
+}
+
+.home-research-box-2 .fl-module-photo .fl-module-content{
+	margin-top: 10px;
+}
+
+.home-info-box-2 .uabb-module-content{
+	padding: 0;
+}
+
+.home-info-box-2 .fl-module-content{
+	margin: auto 0px;
+}
+
+.home-info-box-2 .uabb-infobox h3.uabb-infobox-title {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    padding: 10px;
+    background: #ffffff;
+    color: #0c4682 ;
+    font-weight: 600;
+}
+/* end of homepage */
+
+/* start of sidemenu */
+.nus-left-menu-bar{
+  background-color: #ffffff;
+}
+
+.nus-left-menu-bar .menu{
+	box-shadow: 1px 1px 5px #c0c0c0;
+}
+
+.nus-left-menu-bar .menu a{
+	border:0.5px solid #ececec;
+}
+
+.nus-left-menu-bar .fl-menu li{
+	border: none;
+}
+
+.nus-left-menu-bar li a{
+  color: #003d7c !important;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.nus-left-menu-bar .sub-menu a{
+	padding-left: 30px;
+	color: #696969 !important;
+	font-weight: 400;
+}
+
+.nus-left-menu-bar .current-menu-item > a, .nus-left-menu-bar .current-menu-item > div a, .nus-left-menu-bar a:hover {
+    background-color: #003d7c !important;
+    color: #ffffff !important;
+}
+
+
+.nus-left-menu-bar .menu-item-has-children .fl-has-submenu-container a::after {
+    font-family: "Font Awesome 5 Pro";
+    content: "\f107";
+    font-weight: 600;
+    float: right;
+}
+/* end of sidemenu */
+
+/* star of research */
+.research-resources-infobox h3.uabb-infobox-title{
+	padding: 20px;
+	background-color: #003d7c !important;
+}
+
+.research-resources-infobox .uabb-infobox-text-wrap{
+	padding: 10px 20px 0 20px;
+	border: 1px solid #eaeaea;
+}
+/* end of research */
+
+/* start of media - news */
+.news-post-grid .uabb-post-thumbnail{
+	height: 210px;
+}
+
+.news-post-grid .uabb-blog-posts-shadow{
+	border-bottom: 4px solid #003d7c;
+	box-shadow: 0px 2px 5px 2px #c0c0c0;
+}
+
+.news-post-grid h5.uabb-post-meta{
+	margin-bottom: 10px !important;
+}
+
+.news-post-grid .uabb-meta-date{
+	padding: 5px 10px;
+    background: #f5f5f5;
+}
+
+.news-post-grid .uabb-meta-date::before{
+	content: "\f272";
+    font-family: "Font Awesome 5 Pro";
+    margin-right: 5px;
+}
+
+.news-post-grid .uabb-blog-post-content{
+	padding: 10px 20px !important;
+}
+
+.news-post-grid .uabb-post-heading{
+    font-weight: 600;
+}
+/* end of media - news */
+
+/* start of single post */
+.single-post h2.post-title{
+    font-weight: 700;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.single-post #content .fl-row-fixed-width {
+    max-width: 1180px;
+    padding: 0px 5px;
+    margin: 0px auto;
+}
+/* end of single post */
+
+/* start of news single post */
+.single-news h2.news-title{
+    font-weight: 700;
+    text-align: left;
+    margin: 20px 0;
+}
+/* end of news single post */
+
+/* start of Resource Centre */
+.resource-centre-accordion th{
+	text-align: center;
+	font-weight: 400;
+}
+
+.resource-centre-accordion td a{
+	text-align: center;
+}
+/* end of Resource Centre */
+
+/* start of Past Events */
+.past-events-postgrid .uabb-blog-posts-shadow{
+	background-color: #ffffff;
+}
+
+.past-events-postgrid .uabb-post-thumbnail{
+	padding-top: 25px; 
+}
+
+.past-events-postgrid .uabb-post-heading.uabb-blog-post-section{
+    background-color: #ffffff;
+    color: #0f2f5e;
+    font-weight: 600;
+}
+
+.past-events-postgrid .uabb-meta-date{
+	padding: 5px 10px;
+    background: #f5f5f5;
+}
+
+.past-events-postgrid .uabb-meta-date::before{
+	content: "\f272";
+    font-family: "Font Awesome 5 Pro";
+    margin-right: 5px;
+}
+
+.past-events-postgrid .uabb-read-more-text a{
+	color: #003d7c;
+}
+/* end of Past Events */
+
+/* start of Upcoming Events */
+.upcoming-events-col{
+
+}
+
+.upcoming-events-col h4 a{
+    background-color: #ffffff;
+    color: #0f2f5e;
+    font-weight: 600;
+}
+
+.upcoming-events-col h4 a:hover{
+    background-color: #ffffff;
+    color: #0f2f5e;
+    font-weight: 600;
+}
+
+.upcoming-events-col .event-date .fl-node-content{
+	margin-top: 0;
+}
+
+.upcoming-events-col .event-date p{
+	width: fit-content;
+	padding: 5px 10px;
+	margin-bottom: 0;
+    background: #f5f5f5;
+}
+
+.upcoming-events-col .event-date p::before{
+	content: "\f272";
+    font-family: "Font Awesome 5 Pro";
+    margin-right: 5px;
+}
+
+.upcoming-events-col  .event-content a{
+	color: #003d7c;
+}
+/* end of Upcoming Events */
+
+/* start of Peer-reviewed Journal Articles */
+.journal-articles-accordion .uabb-adv-accordion-content li{
+	margin-bottom: 10px;
+}
+/* end of Peer-reviewed Journal Articles */
+
+/* start of Single Posts */
+.single .navigation.post-navigation{
+	display: none;
+}
+/* end of Single Posts */
+
+
+
+
+/* common */
+.blue-text-0c4682, .blue-text-0c4682 span, .blue-text-0c4682 p{
+	color: #0c4682 !important;
+}
+
+.heading-orange-border-btm span{
+	position: relative;
+}
+
+.heading-orange-border-btm span:after {
+    content: "";
+    width: 50px;
+    border-bottom: 2px solid #ef7c00;
+    position: absolute;
+    left: 2px;
+    bottom: 0;
+}
+
+.fl-module-photo .fl-photo-caption-below{
+	padding-bottom: 0px;
+}
+
+.uabb-infobox h3.uabb-infobox-title{
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: #999999;
+	color: #ffffff;
+}
+/* common */
+
