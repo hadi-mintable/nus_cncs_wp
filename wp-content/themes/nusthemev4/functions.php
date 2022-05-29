@@ -142,3 +142,9 @@ function change_password_wrong_email_redirect() {
 }
 add_action( 'lost_password', 'change_password_wrong_email_redirect' );
 /* VAPT - END */
+
+function my_filter_func($filter) {
+	echo $filter;
+}
+
+add_filter('my_filter_tag', 'my_filter_func');
