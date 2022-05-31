@@ -143,8 +143,14 @@ function change_password_wrong_email_redirect() {
 add_action( 'lost_password', 'change_password_wrong_email_redirect' );
 /* VAPT - END */
 
-function my_filter_func($filter) {
-	echo $filter;
+add_action('init','add_research_category_query');
+function add_research_category_query() {
+    global $wp;
+    $wp->add_query_var('researchCategory');
 }
 
-add_filter('my_filter_tag', 'my_filter_func');
+function filter_our_research_posts($filter) {
+	echo get_query_var('researchCategory');
+}
+
+add_filter('filter_our_research_posts_tag', 'filter_our_research_posts');
