@@ -48,6 +48,10 @@ function child_enqueue_styles() {
 	wp_enqueue_style( 'nus-theme-v4-theme-css', get_stylesheet_directory_uri() . '/style.css', array('astra-theme-css'), CHILD_THEME_NUS_THEME_V4_VERSION, 'all' );
 	wp_enqueue_script( 'nus-astra-js', get_stylesheet_directory_uri() . '/assets/js/main.js', array('jquery'), '20191007', true );
 
+	wp_enqueue_style( 'nus-upgrade-css', get_stylesheet_directory_uri() . '/assets/css/upgrade.css', array('astra-theme-css'), CHILD_THEME_NUS_THEME_V4_VERSION, 'all' );
+
+	wp_enqueue_style( 'foundation-icons', 'https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css', array(), CHILD_THEME_NUS_THEME_V4_VERSION, 'all' );
+
 }
 add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
 
@@ -146,11 +150,11 @@ add_action( 'lost_password', 'change_password_wrong_email_redirect' );
 add_action('init','add_research_category_query');
 function add_research_category_query() {
     global $wp;
-    $wp->add_query_var('researchCategory');
+    $wp->add_query_var('category');
 }
 
 function filter_our_research_posts($filter) {
-	echo get_query_var('researchCategory');
+	echo get_query_var('category');
 }
 
 add_filter('filter_our_research_posts_tag', 'filter_our_research_posts');
