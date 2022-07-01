@@ -117,10 +117,15 @@
   margin-right: auto;
 }
 
+.page-bottom-spacer {
+  padding-bottom: 70px;
+}
+
 .section-title {
   font-weight: bold;
   font-size: 3.7rem;
   margin-bottom: 0;
+  padding-left: 1rem;
 }
 
 @media screen and (max-width: 767px) {
@@ -453,6 +458,7 @@
   .explore-our-research__category {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+    margin: 1rem 1.5rem;
   }
   .explore-our-research__category a {
     padding-top: 26.7%;
@@ -668,7 +674,7 @@
 }
 
 .project-card__logo {
-  max-height: 6.5rem;
+  max-height: 4.5rem;
   margin-bottom: 1rem;
 }
 
@@ -756,6 +762,7 @@
 .giving__subtitle {
   text-align: center;
   margin-bottom: 3rem;
+  font-size: 3rem;
 }
 
 .giving__img {
@@ -816,6 +823,11 @@
   font-weight: bold;
 }
 
+.giving__support ul li img {
+  height: 90px;
+  margin-bottom: 1.5rem;
+}
+
 .giving__notice {
   background-color: #05407e;
   color: white;
@@ -868,6 +880,25 @@
     font-size: 2rem;
     max-width: 85%;
     padding: 1.5rem;
+  }
+  .giving__support ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .giving__support ul li {
+    -ms-flex-preferred-size: 35%;
+        flex-basis: 35%;
+    margin: 1rem;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .giving__support {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .giving__support ul {
+    max-width: 100%;
   }
 }
 
@@ -965,6 +996,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 .articles-listing__sidebar ul label span {
@@ -1282,11 +1314,35 @@
 
 @media screen and (max-width: 767px) {
   .our-research__wrapper ul {
-    gap: 1rem;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    gap: 2rem;
     scroll-behavior: smooth;
     -ms-scroll-snap-type: x mandatory;
         scroll-snap-type: x mandatory;
+    overflow-x: scroll;
   }
+  .our-research__wrapper ul li {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    width: 155px;
+  }
+}
+
+.resources-listing {
+  padding: 4.28rem 0 7.28rem;
+}
+
+.resources-listing__title {
+  margin-bottom: 1.5rem;
+}
+
+.media-listing {
+  padding: 4.28rem 0 7.28rem;
+}
+
+.media-listing__title {
+  margin-bottom: 1.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -150,11 +150,11 @@ add_action( 'lost_password', 'change_password_wrong_email_redirect' );
 add_action('init','add_research_category_query');
 function add_research_category_query() {
     global $wp;
-    $wp->add_query_var('category');
+    $wp->add_query_var('researchCategory');
 }
 
 function filter_our_research_posts($filter) {
-	echo get_query_var('category');
+	echo get_query_var('researchCategory');
 }
 
 add_filter('filter_our_research_posts_tag', 'filter_our_research_posts');

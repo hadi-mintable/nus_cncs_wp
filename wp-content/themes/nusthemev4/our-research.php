@@ -243,7 +243,7 @@ get_header(); ?>
                         <?php if( have_rows('research_articles') ): ?>
                         <ul class="articles-listing__articles">
                             <?php while ( have_rows('research_articles') ) : the_row(); ?>
-                            <?php if (str_contains(get_sub_field('research_areas_category'), get_query_var('category'))): ?>
+                            <?php if (str_contains(get_sub_field('research_areas_category'), get_query_var('researchCategory'))): ?>
                             <div class="article-card">
                                 <div class="article-card__sidebar">
                                     <?php if( get_sub_field('title') ): ?>
