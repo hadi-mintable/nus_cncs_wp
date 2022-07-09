@@ -7,7 +7,7 @@
  * and that other 'pages' on your WordPress site may use a
  * different template.
  * 
- * Template Name: Our Projects
+ * Template Name: Careers
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -31,10 +31,10 @@ get_header(); ?>
 
     <section class="our-projects">
         <div class="fl-row fl-row-fixed-width fl-row-bg-none">
-            <h1 class="section-title our-projects__title">Our Projects</h1>
-            <?php if( have_rows('our_projects') ): ?>
+            <h1 class="section-title our-projects__title">Careers</h1>
+            <?php if( have_rows('careers') ): ?>
             <div class="our-projects__list">
-                <?php while ( have_rows('our_projects') ) : the_row(); ?>
+                <?php while ( have_rows('careers') ) : the_row(); ?>
                 <li class="project-card">
                     <?php if( get_sub_field('image') ):
                         $img = get_sub_field('image'); ?>
