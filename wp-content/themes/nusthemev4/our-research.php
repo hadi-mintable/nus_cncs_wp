@@ -33,38 +33,25 @@ get_header(); ?>
         <div class="fl-row fl-row-fixed-width fl-row-bg-none">
             <h1 class="section-title our-research__title">Our Research</h1>
             <section class="hero-banner hero-banner__short">
-                <div class="hero-banner__container"
-                    style="background-image: url(https://www.nus.edu.sg/cncs/wp-content/uploads/2020/08/Understanding-Impacts-1536x864.jpg)">
+                <?php if( get_field('hero_banner_image') ):
+                                $img = get_field('hero_banner_image'); ?>
+                <div class="hero-banner__container" style="background-image: url(<?php echo $img['url']; ?>)">
                 </div>
+                <?php endif; ?>
+
             </section>
             <div class="our-research__wrapper">
                 <h1 class="section-title our-research__header">Our Research Areas</h1>
                 <ul>
-                    <li
-                        data-body="Climate change is a shift in our planet’s weather and climate systems that brings about increasing average temperatures and more erratic weather events, rising seas, changes inhabitats and wildlife, and a myriad of other impacts. Understanding the implications and likelihood of climate change impacts on natural and human systems in the Asia-Pacific region is important for developing strategies to safeguard the region against environmental, social and economic perturbations.">
-                        <img src="../images/Giving-UnderstandingImpactsIcon.png">
-                        <h4>Understanding<br>Impacts</h4>
+                    <?php while ( have_rows('research_areas') ) : the_row(); ?>
+                    <li data-body="<?php the_sub_field('body_text') ?>">
+                        <?php if( get_sub_field('icon') ):
+                                $img = get_sub_field('icon'); ?>
+                        <?php endif; ?>
+                        <img src="<?php echo $img['url']; ?>">
+                        <h4><?php the_sub_field('title') ?></h4>
                     </li>
-                    <li
-                        data-body="AClimate change is a shift in our planet’s weather and climate systems that brings about increasing average temperatures and more erratic weather events, rising seas, changes inhabitats and wildlife, and a myriad of other impacts. Understanding the implications and likelihood of climate change impacts on natural and human systems in the Asia-Pacific region is important for developing strategies to safeguard the region against environmental, social and economic perturbations.">
-                        <img src="../images/Giving-IdentifyingSolutionsIcon.png">
-                        <h4>Identifying<br>Solutions</h4>
-                    </li>
-                    <li
-                        data-body="BClimate change is a shift in our planet’s weather and climate systems that brings about increasing average temperatures and more erratic weather events, rising seas, changes inhabitats and wildlife, and a myriad of other impacts. Understanding the implications and likelihood of climate change impacts on natural and human systems in the Asia-Pacific region is important for developing strategies to safeguard the region against environmental, social and economic perturbations.">
-                        <img src="../images/Giving-OvercomingBarriersIcon.png">
-                        <h4>Overcoming<br>Barriers</h4>
-                    </li>
-                    <li
-                        data-body="CClimate change is a shift in our planet’s weather and climate systems that brings about increasing average temperatures and more erratic weather events, rising seas, changes inhabitats and wildlife, and a myriad of other impacts. Understanding the implications and likelihood of climate change impacts on natural and human systems in the Asia-Pacific region is important for developing strategies to safeguard the region against environmental, social and economic perturbations.">
-                        <img src="../images/Giving-PrioritisingActionsIcon.png">
-                        <h4>Prioritising<br>Actions</h4>
-                    </li>
-                    <li
-                        data-body="DClimate change is a shift in our planet’s weather and climate systems that brings about increasing average temperatures and more erratic weather events, rising seas, changes inhabitats and wildlife, and a myriad of other impacts. Understanding the implications and likelihood of climate change impacts on natural and human systems in the Asia-Pacific region is important for developing strategies to safeguard the region against environmental, social and economic perturbations.">
-                        <img src="../images/Giving-LeveragingTechnologyIcon.png">
-                        <h4>Leveraging<br>Technology</h4>
-                    </li>
+                    <?php endwhile; ?>
                 </ul>
                 <div class="our-research__chosen">
                     <p>Climate change is a shift in our planet’s weather and climate systems that brings about
@@ -79,76 +66,28 @@ get_header(); ?>
                 <div class="fl-row fl-row-fixed-width fl-row-bg-none explore-our-research__container">
                     <h2 class="explore-our-research__title">Explore our Research</h2>
                     <ul class="explore-our-research__categories">
-                        <li class="explore-our-research__category" data-category="bluecarbon"><a
-                                href="/our-research?category=bluecarbon"><img
-                                    src="https://www.nus.edu.sg/cncs/wp-content/uploads/2020/08/Understanding-Impacts-1536x864.jpg">
+                        <?php while ( have_rows('explore_our_research_category_cards') ) : the_row(); ?>
+                        <li class="explore-our-research__category"
+                            data-category="<?php the_sub_field('parameter_id') ?>">
+                            <a
+                                href="/nus_cncs/research/our-research?researchCategory=<?php the_sub_field('parameter_id') ?>">
+                                <?php if( get_sub_field('background_image') ):
+                                $img = get_sub_field('background_image'); ?>
+                                <img src="<?php echo $img['url']; ?>">
+                                <?php endif; ?>
                                 <div class="explore-our-research__content">
-                                    <h4>Blue Carbon</h4><i class="fa-solid fa-arrow-right-long"></i>
+                                    <h4><?php the_sub_field('title') ?></h4><i class="fa-solid fa-arrow-right-long"></i>
                                 </div>
-                            </a></li>
-                        <li class="explore-our-research__category" data-category="cobenefits"><a
-                                href="/our-research?category=cobenefits"><img
-                                    src="https://www.nus.edu.sg/cncs/wp-content/uploads/2020/08/Identifying-Solutions-768x432.jpg">
-                                <div class="explore-our-research__content">
-                                    <h4>Co-Benefits</h4><i class="fa-solid fa-arrow-right-long"></i>
-                                </div>
-                            </a></li>
-                        <li class="explore-our-research__category" data-category="carbonprospecting"><a
-                                href="/our-research?category=carbonprospecting"><img
-                                    src="https://www.nus.edu.sg/cncs/wp-content/uploads/2020/08/Overcoming-Barriers-1536x864.jpg">
-                                <div class="explore-our-research__content">
-                                    <h4>Carbon Prospecting</h4><i class="fa-solid fa-arrow-right-long"></i>
-                                </div>
-                            </a></li>
-                        <li class="explore-our-research__category" data-category="energy"><a
-                                href="/our-research?category=energy"><img
-                                    src="https://www.nus.edu.sg/cncs/wp-content/uploads/2020/08/Prioritising-Actions-1536x864.jpg">
-                                <div class="explore-our-research__content">
-                                    <h4>Energy</h4><i class="fa-solid fa-arrow-right-long"></i>
-                                </div>
-                            </a></li>
-                        <li class="explore-our-research__category" data-category="agriculture"><a
-                                href="/our-research?category=agriculture"><img
-                                    src="https://www.nus.edu.sg/cncs/wp-content/uploads/2020/08/Leveraging-Technology-768x432.jpg">
-                                <div class="explore-our-research__content">
-                                    <h4>Agriculture</h4><i class="fa-solid fa-arrow-right-long"></i>
-                                </div>
-                            </a></li>
-                        <li class="explore-our-research__category" data-category="ecosystems"><a
-                                href="/our-research?category=ecosystems"><img
-                                    src="https://www.nus.edu.sg/cncs/wp-content/uploads/2020/08/Understanding-Impacts-1536x864.jpg">
-                                <div class="explore-our-research__content">
-                                    <h4>Ecosystems</h4><i class="fa-solid fa-arrow-right-long"></i>
-                                </div>
-                            </a></li>
-                        <li class="explore-our-research__category" data-category="extratag"><a
-                                href="/our-research?category=extratag"><img
-                                    src="https://www.nus.edu.sg/cncs/wp-content/uploads/2020/08/Identifying-Solutions-768x432.jpg">
-                                <div class="explore-our-research__content">
-                                    <h4>Extra Tag</h4><i class="fa-solid fa-arrow-right-long"></i>
-                                </div>
-                            </a></li>
-                        <li class="explore-our-research__category" data-category="extratag"><a
-                                href="/our-research?category=extratag"><img
-                                    src="https://www.nus.edu.sg/cncs/wp-content/uploads/2020/08/Overcoming-Barriers-1536x864.jpg">
-                                <div class="explore-our-research__content">
-                                    <h4>Extra Tag</h4><i class="fa-solid fa-arrow-right-long"></i>
-                                </div>
-                            </a></li>
-                        <li class="explore-our-research__category" data-category="extratag"><a
-                                href="/our-research?category=extratag"><img
-                                    src="https://www.nus.edu.sg/cncs/wp-content/uploads/2020/08/Prioritising-Actions-1536x864.jpg">
-                                <div class="explore-our-research__content">
-                                    <h4>Extra Tag</h4><i class="fa-solid fa-arrow-right-long"></i>
-                                </div>
-                            </a></li>
+                            </a>
+                        </li>
+                        <?php endwhile; ?>
                     </ul>
                 </div>
             </section>
             <div class="fl-row fl-row-fixed-width fl-row-bg-none">
                 <section class="articles-listing">
-                    <form class="articles-listing__search" action="/our-research">
-                        <input type="search" name="s" placeholder="Search Research">
+                    <div class="articles-listing__search">
+                        <input type="search" placeholder="Search Research">
                         <button id="submitSearch">
                             <svg class="svg-inline--fa fa-search fa-w-16 collapsed" data-toggle="collapse"
                                 data-target="#search-collapse" href="#" aria-hidden="true" focusable="false"
@@ -159,7 +98,7 @@ get_header(); ?>
                                 </path>
                             </svg>
                         </button>
-                    </form>
+                    </div>
                     <div class="articles-listing__wrapper">
                         <button id="mobileTrigger">Filter Research</button>
                         <div class="articles-listing__sidebar">
@@ -168,48 +107,56 @@ get_header(); ?>
                                 <ul>
                                     <li>
                                         <label>
-                                            <input type="radio" name="researchAreasSidebar"><span>All</span>
+                                            <input type="radio" name="researchCategory" data-value=""><span>All</span>
                                         </label>
                                     </li>
                                     <li>
                                         <label>
-                                            <input type="radio" name="researchAreasSidebar"><span>Blue carbon</span>
+                                            <input type="radio" name="researchCategory"
+                                                data-value="blue_carbon"><span>Blue carbon</span>
                                         </label>
                                     </li>
                                     <li>
                                         <label>
-                                            <input type="radio" name="researchAreasSidebar"><span>Carbon
+                                            <input type="radio" name="researchCategory"
+                                                data-value="carbon_prospecting"><span>Carbon
                                                 Prospecting</span>
                                         </label>
                                     </li>
                                     <li>
                                         <label>
-                                            <input type="radio" name="researchAreasSidebar"><span>Co-Benefits</span>
+                                            <input type="radio" name="researchCategory"
+                                                data-value="cobenefits"><span>Co-Benefits</span>
                                         </label>
                                     </li>
                                     <li>
                                         <label>
-                                            <input type="radio" name="researchAreasSidebar"><span>Agriculture</span>
+                                            <input type="radio" name="researchCategory"
+                                                data-value="agriculture"><span>Agriculture</span>
                                         </label>
                                     </li>
                                     <li>
                                         <label>
-                                            <input type="radio" name="researchAreasSidebar"><span>Remote Sensing</span>
+                                            <input type="radio" name="researchCategory"
+                                                data-value="remotesensing"><span>Remote Sensing</span>
                                         </label>
                                     </li>
                                     <li>
                                         <label>
-                                            <input type="radio" name="researchAreasSidebar"><span>Energy</span>
+                                            <input type="radio" name="researchCategory"
+                                                data-value="energy"><span>Energy</span>
                                         </label>
                                     </li>
                                     <li>
                                         <label>
-                                            <input type="radio" name="researchAreasSidebar"><span>Ecosystems</span>
+                                            <input type="radio" name="researchCategory"
+                                                data-value="ecosystems"><span>Ecosystems</span>
                                         </label>
                                     </li>
                                     <li>
                                         <label>
-                                            <input type="radio" name="researchAreasSidebar"><span>Wildlife Trade</span>
+                                            <input type="radio" name="researchCategory"
+                                                data-value="wildlife_trade"><span>Wildlife Trade</span>
                                         </label>
                                     </li>
                                 </ul>
@@ -218,23 +165,27 @@ get_header(); ?>
                                 <ul>
                                     <li>
                                         <label>
-                                            <input type="radio" name="contentTypeSidebar"><span>Scientific
+                                            <input type="radio" name="contentType"
+                                                data-value="scientific_publication"><span>Scientific
                                                 Publication</span>
                                         </label>
                                     </li>
                                     <li>
                                         <label>
-                                            <input type="radio" name="contentTypeSidebar"><span>White Papers</span>
+                                            <input type="radio" name="contentType" data-value="white_papers"><span>White
+                                                Papers</span>
                                         </label>
                                     </li>
                                     <li>
                                         <label>
-                                            <input type="radio" name="contentTypeSidebar"><span>Reports</span>
+                                            <input type="radio" name="contentType"
+                                                data-value="reports"><span>Reports</span>
                                         </label>
                                     </li>
                                     <li>
                                         <label>
-                                            <input type="radio" name="contentTypeSidebar"><span>Book Chapter</span>
+                                            <input type="radio" name="contentType" data-value="book_chapter"><span>Book
+                                                Chapter</span>
                                         </label>
                                     </li>
                                 </ul>
@@ -244,12 +195,16 @@ get_header(); ?>
                         <ul class="articles-listing__articles">
                             <?php while ( have_rows('research_articles') ) : the_row(); ?>
                             <?php if (str_contains(get_sub_field('research_areas_category'), get_query_var('researchCategory'))): ?>
+                            <?php if (str_contains(get_sub_field('content_type'), get_query_var('contentType'))): ?>
+                            <?php $search = get_sub_field('title') . get_sub_field('attribution') . get_sub_field('body'); ?>
+                            <?php $searchValue = get_query_var('search'); ?>
+                            <?php if (preg_match("/{$searchValue}/i", $search)): ?>
                             <div class="article-card">
                                 <div class="article-card__sidebar">
                                     <?php if( get_sub_field('title') ): ?>
                                     <h2 class="header">Featured Journal Article</h2>
                                     <?php endif ?>
-                                    <a href="/" title="Co-benefits of forest carbon projects in Southeast Asia">Read</a>
+                                    <a href="/" title="<?php the_sub_field('title'); ?>">Read</a>
                                 </div>
                                 <div class="article-card__body">
                                     <h3 class="title"><?php the_sub_field('title'); ?></h3>
@@ -268,6 +223,8 @@ get_header(); ?>
                                 </div><a href="/"
                                     title="Co-benefits of forest carbon projects in Southeast Asia">Read</a>
                             </div>
+                            <?php endif; ?>
+                            <?php endif;?>
                             <?php endif; ?>
                             <?php endwhile; ?>
                         </ul>

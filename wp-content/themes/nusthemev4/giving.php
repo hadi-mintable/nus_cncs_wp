@@ -34,11 +34,16 @@ get_header(); ?>
             <div class="fl-row fl-row-fixed-width fl-row-bg-none">
                 <h1 class="section-title giving__title">Giving</h1>
             </div>
+            <?php if (get_field('video_background_url')): ?>
             <section class="hero-banner hero-banner__short">
-                <div class="hero-banner__container"
-                    style="background-image: url(https://www.nus.edu.sg/cncs/wp-content/uploads/2020/09/Vision-and-Mission-banner-1024x768.jpg)">
+                <div class="hero-banner__container hero-banner__video">
+                    <video width="320" height="240" playsinline="playsinline" autoplay muted loop>
+                        <source src="<?php the_field('video_background_url'); ?>" type="video/mp4">Your browser does
+                        not support the video tag.
+                    </video>
                 </div>
             </section>
+            <?php endif; ?>
             <div class="fl-row fl-row-fixed-width fl-row-bg-none">
                 <div class="giving__introduction">
                     <h1 class="section-title giving__subtitle">Why Give</h1>
